@@ -1,5 +1,5 @@
 body{
-    background-color:#ecc5c5;
+    background-color:#ffffff;
 }
 
 nav a{
@@ -31,3 +31,13 @@ img{
 	padding: 10px;
 	&:first-child { margin-left: 0; }
 	&:last-child { margin-right: 0; }
+
+
+  .footer {
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     color: white;
+     text-align: center;
+  }
