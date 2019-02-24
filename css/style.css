@@ -2,21 +2,145 @@ body{
     background-color:#ffffff;
 }
 
-nav a{
-  font-family: arial;
+header{
+	flex-direction: row;
+    justify-content: space-between;
+    min-height: auto;
+    align-items: center;
+}
+
+
+.skiptocontent a  {
+	padding:6px;
+	position: absolute;
+	top:100px;
+	left:0px;
+	color:gray;
+	border-right:1px solid white;
+	border-bottom:1px solid white;
+	border-bottom-right-radius:8px;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.button {
+  background-color: #EA9981;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-family: "Avenir";
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: black;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+  font-family: "Avenir";
+}
+
+.footer .page-wrap:after{
+  font-family: "Avenir";
+  font-size: 15px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+div.contactbg{
+  background-image: url('../images/button.jpg');
+}
+
+
+
+p.sub-title {
+  font-family: "Avenir";
+  padding: 20px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+
+p.titleline {
+  font-family: "Abel";
+  padding: 20px;
+  font-weight: 900;
+  font-size: 40px;
+  text-align: center;
+}
+
+p.intro {
+  font-family: "Avenir";
+  line-height: 25px;
+}
+
+p.text {
+  font-family: "Avenir";
+  line-height: 25px;
+}
+
+p.hello {
+  font-family: "Avenir";
+  font-weight: 900;
+  font-size: 35px;
+}
+
+p.subcat {
+  font-family: "Avenir";
+  font-weight: 500;
+  font-size: 30px;
+  padding-bottom: 20px;
+  padding-top: 90px;
+
+}
+
+p.projectcat {
+  font-family: "Avenir";
+  font-weight: 500;
+  font-size: 20px;
+  padding-top: 50px;
+  padding-bottom: 15px;
+}
+
+
+p.photo {
+  font-family: "Avenir";
+  line-height: 25px;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+
+
+nav{
+  font-family: "Avenir";
+  font-size: 15px;
+  padding: 15px;
 }
 
 li{
 	text-decoration: none;
 	display:inline;
-	background-color: white;
 	color: black;
 }
 
-img{
-  max-width:50%;
-  max-height:50%;
+img {
+  width: auto ;
+  max-width: 100% ;
+  height: auto ;
+  padding: 5px;
 }
+
 
 .columns {
 	display: flex;
@@ -31,13 +155,3 @@ img{
 	padding: 10px;
 	&:first-child { margin-left: 0; }
 	&:last-child { margin-right: 0; }
-
-
-  .footer {
-     position: fixed;
-     left: 0;
-     bottom: 0;
-     width: 100%;
-     color: white;
-     text-align: center;
-  }
