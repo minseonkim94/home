@@ -10,6 +10,43 @@ header{
 }
 
 
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 20px;
+
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.projects-grid img {
+  display: block;
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+}
+
+/* Large Phone - 2 column */
+@media screen and (max-width: 700px){
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Small Phones - 1 column */
+@media screen and (max-width: 400px){
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
 .skiptocontent a  {
 	padding:6px;
 	position: absolute;
@@ -21,6 +58,11 @@ header{
 	border-bottom-right-radius:8px;
   z-index: 1;
   visibility: hidden;
+}
+
+.col {
+  font-family: Avenir;
+  text-align: center;
 }
 
 .button {
@@ -44,7 +86,7 @@ header{
   font-family: "Avenir";
 }
 
-.footer .page-wrap:after{
+.footer{
   font-family: "Avenir";
   font-size: 15px;
   position: fixed;
@@ -58,42 +100,84 @@ header{
 }
 
 div.contactbg{
-  background-image: url('../images/button.jpg');
+  background-color: #ffffff;
 }
 
+div.hello-box{
+  background-color: #ffffff);
+  color: #000000;
+  border-radius: 5px;
+  padding: 30px;
+  font-size: 100%;
+  align-content: center;
+}
 
+.responsive {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  max-width: 600px;
+}
+
+.center {
+  padding: 20px;
+}
+
+.wrapper2 {
+  background-color: #fff;
+  color: #444;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr) );
+  gap: 20px;
+  grid-auto-rows: minmax(150px, auto);
+}
 
 p.sub-title {
   font-family: "Avenir";
   padding: 20px;
   font-weight: 700;
   font-size: 30px;
+  text-align: center;
 }
 
 
 p.titleline {
-  font-family: "Abel";
-  padding: 20px;
+  font-family: "Avenir";
+  padding-bottom: 20px;
+  padding-top: 50px;
   font-weight: 900;
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
 }
 
 p.intro {
   font-family: "Avenir";
   line-height: 25px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 15px;
+  text-align: left;
+
 }
 
 p.text {
   font-family: "Avenir";
-  line-height: 25px;
+  line-height: 20px;
+}
+
+p.project-text {
+  font-family: "Avenir";
+  line-height: 30px;
+  text-align: center;
+  padding-bottom: 40px;
 }
 
 p.hello {
   font-family: "Avenir";
   font-weight: 900;
   font-size: 35px;
-}
+  padding-left: 40px;
+  padding-top: 40px;}
 
 p.subcat {
   font-family: "Avenir";
@@ -121,16 +205,35 @@ p.photo {
 }
 
 
+.icon {
+  padding-left: 40px;
+  padding-bottom: 5px;
+}
+
+p.download {
+padding-left: 40px;
+}
+
 
 nav{
   font-family: "Avenir";
   font-size: 15px;
   padding: 15px;
+  color: black;
+}
+
+ul{
+  text-align: center;
+  color: black;
+  text: 30px;
+
+
 }
 
 li{
 	text-decoration: none;
 	display:inline;
+  text-align: center;
 	color: black;
 }
 
@@ -149,9 +252,80 @@ img {
 	margin: 5px 0;
 }
 
-.column {
-	flex: 1;
-	margin: 2px;
-	padding: 10px;
-	&:first-child { margin-left: 0; }
-	&:last-child { margin-right: 0; }
+html {
+    box-sizing: border-box;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.flex__item {
+    background: #ffffff;
+    padding: 1em;
+    border: 1px solid #fff;
+  }
+
+.flex__item:nth-child(-n + 6) {
+    flex-basis: 50%;
+  }
+
+.flex__item:nth-child(n + 7) {
+    flex-grow: 1;
+  }
+
+#slideshow {
+    overflow: hidden;
+    height: 600px;
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+.slide-wrapper {
+    width: 2912px;
+    -webkit-animation: slide 18s ease infinite;
+  }
+
+.slide {
+    float: left;
+    height: 600px;
+    width: 600px;
+  }
+
+.slide:nth-child(1) {
+    background: #ffffff;
+  }
+
+.slide:nth-child(2) {
+    background: #ffffff;
+  }
+
+.slide:nth-child(3) {
+    background: #ffffff;
+  }
+
+.slide:nth-child(4) {
+    background: #ffffff;
+  }
+
+.slide-number {
+    color: #000;
+    text-align: center;
+    font-size: 2em;
+  }
+
+@-webkit-keyframes slide {
+    20% {margin-left: 0px;}
+    30% {margin-left: -600px;}
+    50% {margin-left: -600px;}
+    60% {margin-left: -1200px;}
+    70% {margin-left: -1200px;}
+    80% {margin-left: -1800px;}
+    90% {margin-left: -1800px;}
+  }
